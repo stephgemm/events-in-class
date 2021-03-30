@@ -24,11 +24,19 @@ events <- readRDS("events_saved.rds")
 
 
 
-
+Candidates with the highest number of campaign events
 
 ```{r}
+  
+head(events)
 
+events %>% count(cand_lastname)
 
+num_of_events <- events %>% 
+  count(cand_lastname) %>% arrange(desc(n))
+
+glimpse(num_of_events)
+View(num_of_events)
 
 
 ```
