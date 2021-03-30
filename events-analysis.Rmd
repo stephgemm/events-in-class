@@ -1,0 +1,38 @@
+---
+title: "events-analysis"
+author: "steph gemmell"
+date: "3/30/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(lubridate)
+library(janitor)
+library(glue)
+library(plotly)
+library(DT)
+library(htmlwidgets)
+library(htmltools)
+library(readr)
+
+events <- readRDS("events_saved.rds")
+
+```
+
+
+
+
+
+```{r}
+
+
+
+
+```
+
+
+
+

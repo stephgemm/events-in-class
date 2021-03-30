@@ -1,0 +1,47 @@
+---
+title: "events-in-class-flexdash"
+author: "steph gemmell"
+date: "3/30/2021"
+output: 
+  flexdashboard::flex_dashboard:
+    vertical_layout: scroll
+    theme: journal
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(flexdashboard)
+library(tidyverse)
+library(lubridate)
+library(janitor)
+library(glue)
+library(plotly)
+library(DT)
+library(kableExtra)
+library(htmlwidgets)
+library(htmltools)
+
+```
+
+
+### Chart 1 
+
+
+```{r}
+
+
+
+```
+
+### Chart 2
+
+```{r}
+
+
+
+```
+
+
+
+
