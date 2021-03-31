@@ -22,8 +22,6 @@ events <- readRDS("events_saved.rds")
 
 ```
 
-
-
 Candidates with the highest number of campaign events
 
 ```{r}
@@ -38,9 +36,20 @@ num_of_events <- events %>%
 glimpse(num_of_events)
 View(num_of_events)
 
-
 ```
 
+states with the highest number of campaign events
 
+```{r}
+
+events %>% count(state)
+
+state_events <- events %>% 
+  count(state) %>% arrange(desc(n))
+
+glimpse(state_events)
+View(state_events)
+
+```
 
 

@@ -1,7 +1,5 @@
 ---
 title: "events-in-class-flexdash"
-author: "steph gemmell"
-date: "3/30/2021"
 output: 
   flexdashboard::flex_dashboard:
     vertical_layout: scroll
@@ -25,22 +23,49 @@ library(htmltools)
 ```
 
 
-### Chart 1 
-
-
-```{r}
-
-
-
-```
-
-### Chart 2
+Candidates with Most Campaign Events
+=====================================
 
 ```{r}
 
-
+fig <- plot_ly(
+  x = c("Buttigieg", "Warren", "Klobuchar", "Sanders", "O'Rourke"),
+  y = c(74, 73, 70, 67, 64),
+  type = "bar",
+  color = "orange"
+)
+fig <- fig %>% layout(title = "Candidates with Most Campaign Events",
+         xaxis = list(title = "Candidate"),
+         yaxis = list (title = "Number of Campaign Events"))
+fig
 
 ```
+
+States with Most Campaign Events
+=====================================
+
+```{r}
+
+Products <- c("IA", "NH", "SC", "DC", "CA")
+Incidences <- c(200, 132, 90, 86, 69)
+df <- data.frame(Products, Incidences)
+#Data Visualisation
+fig <- df %>% plot_ly(labels = ~Products, values = ~Incidences)
+fig <- fig %>% add_pie(hole = 0.6)
+fig <- fig %>% layout(
+                  title = "States with Most Campaign Events",  showlegend = F,
+                  xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
+                  yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
+fig
+
+```
+
+
+
+
+
+
+
 
 
 
