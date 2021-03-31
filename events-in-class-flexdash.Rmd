@@ -46,11 +46,11 @@ States with Most Campaign Events
 
 ```{r}
 
-Products <- c("IA", "NH", "SC", "DC", "CA")
-Incidences <- c(200, 132, 90, 86, 69)
-df <- data.frame(Products, Incidences)
+State <- c("IA", "NH", "SC", "DC", "CA")
+EventNumber <- c(200, 132, 90, 86, 69)
+df <- data.frame(State, EventNumber)
 #Data Visualisation
-fig <- df %>% plot_ly(labels = ~Products, values = ~Incidences)
+fig <- df %>% plot_ly(labels = ~State, values = ~EventNumber)
 fig <- fig %>% add_pie(hole = 0.6)
 fig <- fig %>% layout(
                   title = "States with Most Campaign Events",  showlegend = F,
@@ -59,14 +59,5 @@ fig <- fig %>% layout(
 fig
 
 ```
-
-
-
-
-
-
-
-
-
 
 
